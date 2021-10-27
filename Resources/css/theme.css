@@ -31,10 +31,19 @@
    ============================ */
 
 body {
-    background-image: url('../images/bg.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    color: #1e2333;
+    background-color: #2c3e50;
+    color: #fff;
+    max-width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+    max-width: 800px;
+    height:60px;
+    padding: 0 20px;
 }
 
 h1, h3, p {
@@ -59,8 +68,16 @@ p {
            MAIN CLASSES
    ============================ */
 
+#home {
+    display: none;
+}
+
+#under-construction {
+    display: flex;
+}
+
 .container {
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
 .close-cross {
@@ -71,13 +88,28 @@ p {
     width: 20px;
 }
 
+.height-viewport {
+    height: 100vh;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 /* TITLE SECTION */
 
 .title-section {
     text-align: center;
-    margin-top: 65px;
+    padding-top: 65px;
     animation: fadeInFromTop ease 2s;
     -webkit-animation: fadeInFromTop ease 2s;
+}
+
+.title-section.no-pd {
+    padding: 0;
 }
 
 .title-section .title-text {
@@ -87,83 +119,48 @@ p {
 }
 
 .title-section .subtitle-text {
-    margin-top: 35px;
+    margin-top: 15px;
     font-weight: 500;
 }
 
-.title-section .stars-rating {
+/* LIST SECTION */
+
+.list-section {
+    margin-top: 50px;
+    padding: 0 15px;
     display: flex;
     display: -webkit-flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5px;
+    flex-direction: column;
 }
 
-.title-section .stars-rating img {
-    width: 140px;
-}
-
-.title-section .stars-rating p {
-    margin-left: 10px;
-    font-weight: 500;
-    color: #f85036;
-}
-
-/* CHECKLIST SECTION */
-
-.checklist-section {
-    margin-top: 50px;
-    padding: 0 15px;
-}
-
-.checklist-section .checklist-element {
-    display: flex;
-    display: -webkit-flex;
-    align-items: center;
+.list-section .list-elements .list-element {
     margin-bottom: 25px;
+    text-align: left;
     opacity: 0;
 }
 
-.checklist-section .checklist-element:nth-child(1) {
+.list-section .list-elements .list-element:nth-child(1) {
     animation: opacityZeroToOne ease 2s forwards;
     -webkit-animation: opacityZeroToOne ease 2s forwards;
 }
 
-.checklist-section .checklist-element:nth-child(2) {
+.list-section .list-elements .list-element:nth-child(2) {
     animation: opacityZeroToOne ease 2s forwards;
     -webkit-animation: opacityZeroToOne ease 2s forwards;
     animation-delay: 0.5s;
     -webkit-animation-delay: 0.5s;
 }
 
-.checklist-section .checklist-element:nth-child(3) {
+.list-section .list-elements .list-element:nth-child(3) {
     animation: opacityZeroToOne ease 2s forwards;
     -webkit-animation: opacityZeroToOne ease 2s forwards;
     animation-delay: 1s;
     -webkit-animation-delay: 1s;
 }
 
-.checklist-section .checklist-element .checklist-oval {
-    display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    background-color: #13d68f;
-    border-radius: 20px;
-}
-
-.checklist-section .checklist-element .checklist-oval img {
-    width: 17px;
-    margin-top: 5px;
-}
-
-.checklist-section .checklist-element .checklist-text {
-    margin-left: 20px;
-}
-
-.checklist-section .checklist-element .checklist-text p {
+.list-section .list-element .list-text p {
     color: #13d68f;
     font-size: 17px;
     margin-top: 5px;
@@ -198,14 +195,14 @@ p {
     font-weight: 500;
 }
 
-/* DISCLAIMER SECTION */
+/* FOOTER SECTION */
 
 .disclaimer-section {
     margin-top: 20px;
 }
 
 .disclaimer-section p {
-    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
     line-height: 1.7;
-    color: #414141;
 }
