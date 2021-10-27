@@ -1,0 +1,211 @@
+/* ============================
+            FONT FACES
+   ============================ */
+
+@font-face {
+    font-family: 'Barlow Semi Condensed';
+    src: url(../fonts/BarlowSemiCondensed-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(../fonts/FiraSans-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(../fonts/FiraSans-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(../fonts/FiraSans-SemiBold.ttf);
+    font-weight: 600;
+}
+
+/* ============================
+            PRIMITIVE
+   ============================ */
+
+body {
+    background-image: url('../images/bg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #1e2333;
+}
+
+h1, h3, p {
+    margin: 0;
+}
+
+h1, h3 {
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-family: 'Fira Sans';
+    font-size: 18px;
+}
+
+/* ============================
+           MAIN CLASSES
+   ============================ */
+
+.container {
+    padding: 20px;
+}
+
+.close-cross {
+    display: inline-block;
+}
+
+.close-cross img {
+    width: 20px;
+}
+
+/* TITLE SECTION */
+
+.title-section {
+    text-align: center;
+    margin-top: 65px;
+    animation: fadeInFromTop ease 2s;
+    -webkit-animation: fadeInFromTop ease 2s;
+}
+
+.title-section .title-text {
+    color: #ffffff;
+    text-shadow: 0px 0px 20px #000000;
+    line-height: 1;
+}
+
+.title-section .subtitle-text {
+    margin-top: 35px;
+    font-weight: 500;
+}
+
+.title-section .stars-rating {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.title-section .stars-rating img {
+    width: 140px;
+}
+
+.title-section .stars-rating p {
+    margin-left: 10px;
+    font-weight: 500;
+    color: #f85036;
+}
+
+/* CHECKLIST SECTION */
+
+.checklist-section {
+    margin-top: 50px;
+    padding: 0 15px;
+}
+
+.checklist-section .checklist-element {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    margin-bottom: 25px;
+    opacity: 0;
+}
+
+.checklist-section .checklist-element:nth-child(1) {
+    animation: opacityZeroToOne ease 2s forwards;
+    -webkit-animation: opacityZeroToOne ease 2s forwards;
+}
+
+.checklist-section .checklist-element:nth-child(2) {
+    animation: opacityZeroToOne ease 2s forwards;
+    -webkit-animation: opacityZeroToOne ease 2s forwards;
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+}
+
+.checklist-section .checklist-element:nth-child(3) {
+    animation: opacityZeroToOne ease 2s forwards;
+    -webkit-animation: opacityZeroToOne ease 2s forwards;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+.checklist-section .checklist-element .checklist-oval {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #13d68f;
+    border-radius: 20px;
+}
+
+.checklist-section .checklist-element .checklist-oval img {
+    width: 17px;
+    margin-top: 5px;
+}
+
+.checklist-section .checklist-element .checklist-text {
+    margin-left: 20px;
+}
+
+.checklist-section .checklist-element .checklist-text p {
+    color: #13d68f;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+/* PURCHASE SECTION */
+
+.purchase-section {
+    margin-top: 50px;
+}
+
+.purchase-section > p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.purchase-section .purchase-button {
+    background-color: #13d68f;
+    border-radius: 35px;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+
+.purchase-section .purchase-button .purchase-text {
+    font-weight: 600;
+}
+
+.purchase-section .purchase-button .purchase-price {
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+/* DISCLAIMER SECTION */
+
+.disclaimer-section {
+    margin-top: 20px;
+}
+
+.disclaimer-section p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #414141;
+}
