@@ -8,14 +8,17 @@
     <link rel="stylesheet" type="text/css" href="./Resources/css/theme.css">
 </head>
 <body>
-    <div id="under-construction" class="container height-viewport centered">
-        <div class="title-section no-pd">
+    <div id="under-construction" class="body-container">
+        <div class="top-container">
+            <img id="back" class="back-btn" src="./Resources/icons/back.png">
+        </div>
+        <div class="title-section centered no-pd">
             <h1 class="title-text">UNDER CONSTRUCTION</h1>
             <p class="subtitle-text text-medium">Live soon...</p>
         </div>
     </div>
 
-    <div id="home" class="container">
+    <div id="home" class="body-container">
         <div class="title-section">
             <h1 class="title-text">ANDREA LOSAVIO</h1>
             <p class="subtitle-text text-medium">Software/Web Developer</p>
@@ -23,19 +26,19 @@
         <div class="list-section">
             <div class="list-elements">
                 <div class="list-element">
-                    <div class="list-text">
+                    <div class="list-text" id="biography">
                         <h3>Biography</h3>
                         <p>About me.</p>
                     </div>
                 </div>
                 <div class="list-element">
-                    <div class="list-text">
+                    <div class="list-text" id="curriculum">
                         <h3>Curriculum Vitae</h3>
                         <p>My professional career.</p>
                     </div>
                 </div>
                 <div class="list-element">
-                    <div class="list-text">
+                    <div class="list-text" id="projects">
                         <h3>Projects</h3>
                         <p>My personal activities.</p>
                     </div>
@@ -44,10 +47,14 @@
         </div>
     </div>
     <footer>
-        <div class="userful-links"></div>
         <div class="disclaimer-section">
             <p>© 2021 Andrea Losavio - All Rights Reserved.</p>
         </div>
+        <div class="useful-links">
+            <a href="https://www.linkedin.com/in/andrea-losavio"><img src="./Resources/icons/linkedin.png"></a>
+            <a href="https://github.com/ontech7"><img src="./Resources/icons/github.png"></a>
+        </div>
     </footer>
+    <script type="text/javascript" src="./Resources/js/index.js"></script>
 </body>
 </html>

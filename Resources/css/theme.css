@@ -39,10 +39,15 @@ body {
 }
 
 footer {
-    position:absolute;
-    bottom:0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    width: calc(100% - 40px);
     max-width: 800px;
-    height:60px;
+    height: 60px;
     padding: 0 20px;
 }
 
@@ -68,41 +73,55 @@ p {
            MAIN CLASSES
    ============================ */
 
-#home {
+#under-construction {
     display: none;
 }
 
-#under-construction {
-    display: flex;
-}
-
-.container {
+.body-container {
     /*padding: 20px;*/
+    height: calc(100% - 60px); /* 60px footer */
+    display: flex;
+    flex-direction: column;
 }
 
-.close-cross {
-    display: inline-block;
+.top-container {
+    height: 60px;
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
 }
 
-.close-cross img {
-    width: 20px;
+.top-container .back-btn {
+    height: 30px;
+    filter: invert(1);
 }
 
 .height-viewport {
     height: 100vh;
 }
 
-.centered {
+.height100 {
+    height: 100%;
+}
+
+.flex {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    display: -webkit-flex;
+}
+
+.centered {
+    flex: 1 1 auto !important;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 /* TITLE SECTION */
 
 .title-section {
     text-align: center;
+    flex: 0 1 auto;
     padding-top: 65px;
     animation: fadeInFromTop ease 2s;
     -webkit-animation: fadeInFromTop ease 2s;
@@ -126,8 +145,7 @@ p {
 /* LIST SECTION */
 
 .list-section {
-    margin-top: 50px;
-    padding: 0 15px;
+    flex: 1 1 auto;
     display: flex;
     display: -webkit-flex;
     align-items: center;
@@ -136,9 +154,15 @@ p {
 }
 
 .list-section .list-elements .list-element {
+    cursor: pointer;
     margin-bottom: 25px;
     text-align: left;
+    transition: all .35s ease;
     opacity: 0;
+}
+
+.list-section .list-elements .list-element:hover {
+    text-shadow: 0px 0px 15px #000000;
 }
 
 .list-section .list-elements .list-element:nth-child(1) {
@@ -197,12 +221,17 @@ p {
 
 /* FOOTER SECTION */
 
-.disclaimer-section {
-    margin-top: 20px;
-}
-
 .disclaimer-section p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
     line-height: 1.7;
+}
+
+.useful-links {
+    align-self: center;
+}
+
+.useful-links img {
+    height: 30px;
+    padding-left: 5px;
 }
