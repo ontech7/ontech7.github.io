@@ -1,45 +1,51 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("back").onclick = async function() {
-        await smoothTransition(true);
-        document.getElementById("under-construction").style.display = 'none';
-        document.getElementById("home").style.display = 'flex';
-        await smoothTransition(false);
+$(function() {
+    $.fn.showFlex = function() {
+        this.css('display', 'flex');
     }
 
-    document.getElementById("biography").onclick = async function() {
-        await smoothTransition(true);
-        document.getElementById("home").style.display = 'none';
-        document.getElementById("under-construction").style.display = 'flex';
-        await smoothTransition(false);
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    
+    async function smoothTransition(isForward) {
+        if (isForward) {
+            document.body.style.transition = 'all .2s ease-in';
+            document.body.style.filter = 'blur(6px)';
+            await sleep(200);
+        } else {
+            await sleep(200);
+            document.body.style.transition = 'all .2s ease-out';
+            document.body.style.filter = 'none';
+        }
     }
 
-    document.getElementById("curriculum").onclick = async function() {
-        await smoothTransition(true);
-        document.getElementById("home").style.display = 'none';
-        document.getElementById("under-construction").style.display = 'flex';
-        await smoothTransition(false);
-    }
+    $(".back-btn").on('click', async function() {
+        var idSection = $(this).closest('.body-container').prop('id');
 
-    document.getElementById("projects").onclick = async function() {
         await smoothTransition(true);
-        document.getElementById("home").style.display = 'none';
-        document.getElementById("under-construction").style.display = 'flex';
+        $("#" + idSection).hide();
+        $("#home").showFlex();
         await smoothTransition(false);
-    }
+    });
+
+    $("#biography").on('click', async function() {
+        await smoothTransition(true);
+        $("#home").hide();
+        $("#under-construction").showFlex();
+        await smoothTransition(false);
+    })
+
+    $("#curriculum").on('click', async function() {
+        await smoothTransition(true);
+        $("#home").hide();
+        $("#curriculum-section").showFlex();
+        await smoothTransition(false);
+    });
+
+    $("#projects").on('click', async function() {
+        await smoothTransition(true);
+        $("#home").hide();
+        $("#under-construction").showFlex();
+        await smoothTransition(false);
+    });
 });
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function smoothTransition(isForward) {
-    if (isForward) {
-        document.body.style.transition = 'all .2s ease-in';
-        document.body.style.filter = 'blur(6px)';
-        await sleep(200);
-    } else {
-        await sleep(200);
-        document.body.style.transition = 'all .2s ease-out';
-        document.body.style.filter = 'none';
-    }
-}
