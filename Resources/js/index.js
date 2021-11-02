@@ -18,17 +18,7 @@ $(function() {
             document.body.style.filter = 'none';
         }
     }
-
-    function calcVH() {
-        $('body').innerHeight( $(this).innerHeight() );
-    }
-
-    calcVH();
-
-    $(window).on('orientationchange', function() {
-        calcVH();
-    });
-
+    
     $(".back-btn").on('click', async function() {
         var idSection = $(this).closest('.body-container').prop('id');
 
