@@ -45,7 +45,7 @@ $(function() {
     $("#projects").on('click', async function() {
         await smoothTransition(true);
         $("#home").hide();
-        $("#under-construction").showFlex();
+        $("#curriculum-section").showFlex();
         await smoothTransition(false);
     });
 });

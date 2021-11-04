@@ -137,13 +137,13 @@ p {
     text-shadow: 0 0 20px #000;
 }
 
-.height100 {
-    height: 100%;
+.working-experience .job {
+    display: flex;
+    align-items: center;
 }
 
-.flex {
-    display: flex;
-    display: -webkit-flex;
+.working-experience .job .job-title {
+    margin-left: 20px;;
 }
 
 .centered {
@@ -220,6 +220,17 @@ p {
     -webkit-animation-delay: 1s;
 }
 
+.list-section .list-element .list-text sup {
+    margin-left: 5px;
+    color: #e74c3c;
+}
+
+.list-section .list-element .list-text sup span {
+    color: white;
+    font-size: 20px;
+    animation: blink ease 2s infinite;
+}
+
 .list-section .list-element .list-text p {
     color: #13d68f;
     font-size: 17px;
@@ -270,4 +281,18 @@ p {
 .useful-links img {
     height: 30px;
     padding-left: 5px;
+}
+
+/* ======= MOBILE ======= */
+
+@media (max-width: 767px){
+    .working-experience .job {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .working-experience .job .job-title {
+        margin-left: 0;
+        margin-right: 15px;
+    }
 }
