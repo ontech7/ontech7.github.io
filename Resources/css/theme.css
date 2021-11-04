@@ -86,6 +86,29 @@ a {
     color: #3498db;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #37495c;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #25313e;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #1a232c;
+    border-radius: 5px;
+}
+
 /* ============================
            MAIN CLASSES
    ============================ */
