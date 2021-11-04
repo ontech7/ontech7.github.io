@@ -259,6 +259,12 @@ a {
     margin-top: 15px;
 }
 
+.project br {
+    display: block;
+    content: " ";
+    margin-top: 10px;
+}
+
 .project:nth-child(2n) {
     flex-direction: row-reverse;
     border-right: none;
