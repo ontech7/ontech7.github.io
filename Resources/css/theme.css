@@ -272,34 +272,25 @@ a {
 .project {
     display: flex;
     justify-content: space-between;
-    border-right: 6px solid #3498db;
     padding-right: 15px;
     padding-bottom: 10px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.7);
     background-color: #3498db47;
     margin-bottom: 15px;
     margin-top: 15px;
+}
+
+.project:nth-child(2n) {
+    flex-direction: row-reverse;
+    padding-right: 0;
+    padding-left: 15px;
 }
 
 .project br {
     display: block;
     content: " ";
     margin-top: 10px;
-}
-
-.project:nth-child(2n) {
-    flex-direction: row-reverse;
-    border-right: none;
-    padding-right: 0;
-    padding-left: 15px;
-    border-left: 6px solid #3498db;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    margin-bottom: 15px;
-    margin-top: 15px;
 }
 
 .project .project-image {
@@ -357,16 +348,12 @@ a {
         flex-direction: column;
         border: none;
         padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgb(0, 0, 0, 0.7);
     }
 
     .project:nth-child(2n) {
         flex-direction: column;   
         border: none;
         padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 0 15px rgb(0, 0, 0, 0.7);
     }
     
     .project .project-image {
