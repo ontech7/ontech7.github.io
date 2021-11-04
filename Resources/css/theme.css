@@ -273,10 +273,6 @@ a {
     margin-top: 15px;
 }
 
-.project:nth-child(n+1) {
-    /*margin-top: 20px;*/
-}
-
 .project .project-image {
     margin: 0 20px;
 }
